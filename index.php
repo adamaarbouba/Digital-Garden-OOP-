@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Digital Garden</title>
-    <link rel="stylesheet" href="homepage.css">
+    <link rel="stylesheet" href="public_assets/css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -13,11 +13,8 @@
             <h1 class="logo">Digital Garden</h1>
             <nav>
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Notes</a></li>
-                    <li><a href="#">Ideas</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="public/login.php">Log In</a></li>
+                    <li><a href="#">Sign In</a></li>
                 </ul>
             </nav>
         </div>

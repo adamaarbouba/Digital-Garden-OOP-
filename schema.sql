@@ -1,0 +1,46 @@
+DROP DATABASE IF EXISTS digital_garden_oop;
+
+CREATE DATABASE digital_garden_oop;
+
+USE digital_garden_oop;
+
+CREATE TABLE persons (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    username VARCHAR(150),
+    email VARCHAR(150) UNIQUE NOT NULL,
+    password VARCHAR(255),
+    registration_date DATETIME DEFAULT CURRENT_TIMESTAMP,
+    role VARCHAR(150)
+);
+
+
+CREATE TABLE users (
+    id INT PRIMARY KEY, 
+    status ENUM('BLOCKED', 'UNBLOCKED') NOT NULL,
+    FOREIGN KEY (id) REFERENCES persons(id) ON DELETE CASCADE
+);
+
+CREATE TABLE admins (
+    id INT PRIMARY KEY,
+    FOREIGN KEY (id) REFERENCES persons(id) ON DELETE CASCADE
+);
+
+CREATE TABLE themes (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    user_id INT,
+    name VARCHAR(50),
+    color VARCHAR(7),
+    creation_date DATETIME DEFAULT CURRENT_TIMESTAMP,
+    modification_date DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+);
+
+CREATE TABLE notes (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    title VARCHAR(255) NOT NULL,
+    content TEXT,
+    importance TINYINT DEFAULT 0 CHECK (importance BETWEEN 0 AND 5),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    theme_id INT NOT NULL,
+    FOREIGN KEY (theme_id) REFERENCES themes(id) ON DELETE CASCADE
+);
