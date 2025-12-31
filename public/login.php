@@ -20,7 +20,7 @@
                 <div class="logo">Digital Garden</div>
                 <ul>
                     <li><a href="../index.php">Home</a></li>
-                    <li><a href="signup.html">Sign Up</a></li>
+                    <li><a href="register.php">Sign Up</a></li>
                 </ul>
             </nav>
         </div>
@@ -49,7 +49,7 @@
             </form>
 
             <div class="auth-footer">
-                <p>Don't have an account? <a href="signup.html">Sign up</a></p>
+                <p>Don't have an account? <a href="register.php">Sign up</a></p>
             </div>
         </div>
     </main>

@@ -14,7 +14,7 @@
             <nav>
                 <ul>
                     <li><a href="public/login.php">Log In</a></li>
-                    <li><a href="#">Sign In</a></li>
+                    <li><a href="public/register.php">Sign In</a></li>
                 </ul>
             </nav>
         </div>
