@@ -30,7 +30,7 @@ unset($_SESSION['error']);
                 </div>
             <?php endif; ?>
 
-            <form action="../includes/auth.php" method="POST" id="signupForm">
+            <form action="./../includes/auth.php" method="POST" id="signupForm">
                 <div class="form-group">
                     <label for="username">Username</label>
                     <input type="text" id="username" name="username" placeholder="Choose a username" required>

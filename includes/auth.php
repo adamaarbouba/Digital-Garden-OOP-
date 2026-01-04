@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-require_once __DIR__ . '/../src/Service/AuthService.php';
+require_once __DIR__ . './../Service/AuthService.php';
 
 // Handle Login
 if (isset($_POST['login_btn'])) {
@@ -27,12 +27,12 @@ if (isset($_POST['login_btn'])) {
         if ($result['user']->getRole() === 'admin') {
             header("Location: ../admin/dashboard.php");
         } else {
-            header("Location: dashboard.php");
+            header("Location: ../public/dashboard.php");
         }
         exit();
     } else {
         $_SESSION['error'] = $result['message'];
-        header("Location: login.php");
+        header("Location: ../public/login.php");
         exit();
     }
 }
@@ -47,19 +47,19 @@ if (isset($_POST['signup_btn'])) {
     // Validation
     if (empty($username) || empty($email) || empty($password) || empty($confirmPassword)) {
         $_SESSION['error'] = "All fields are required";
-        header("Location: register.php");
+        header("Location: ../public/register.php");
         exit();
     }
 
     if ($password !== $confirmPassword) {
         $_SESSION['error'] = "Passwords do not match";
-        header("Location: register.php");
+        header("Location: ../public/register.php");
         exit();
     }
 
     if (strlen($password) < 6) {
         $_SESSION['error'] = "Password must be at least 6 characters";
-        header("Location: register.php");
+        header("Location: ../public/register.php");
         exit();
     }
 
@@ -68,14 +68,14 @@ if (isset($_POST['signup_btn'])) {
 
     if ($result['success']) {
         $_SESSION['success'] = "Registration successful! Please login.";
-        header("Location: login.php");
+        header("Location: ../public/login.php");
         exit();
     } else {
         $_SESSION['error'] = $result['message'];
-        header("Location: register.php");
+        header("Location: ../public/register.php");
         exit();
     }
 }
 
-header("Location: login.php");
+header("Location: ../public/login.php");
 exit();
