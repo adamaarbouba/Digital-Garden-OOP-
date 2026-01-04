@@ -1,3 +1,8 @@
+<?php
+session_start();
+$error = $_SESSION['error'] ?? '';
+unset($_SESSION['error']);
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,7 +16,7 @@
 
 <body>
 
-    <?php 
+    <?php
     include_once "../includes/header.php";
     ?>
 
@@ -19,7 +24,11 @@
         <div class="auth-card">
             <h2>Create Account</h2>
 
-            <div id="error-msg" class="error-message"></div>
+            <?php if ($error): ?>
+                <div class="error-message" style="display: block;">
+                    <?php echo htmlspecialchars($error); ?>
+                </div>
+            <?php endif; ?>
 
             <form action="../includes/auth.php" method="POST" id="signupForm">
                 <div class="form-group">
@@ -50,10 +59,11 @@
             </div>
         </div>
     </main>
+
     <?php
     include_once "../includes/footer.php";
     ?>
-    <script src="../public_assets/js/index.js"></script>
+
 </body>
 
 </html>
