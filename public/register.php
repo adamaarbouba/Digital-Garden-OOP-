@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,19 +8,12 @@
     <link rel="stylesheet" href="../public_assets/css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-    <header>
-        <div class="container">
-            <nav>
-                <div class="logo">Digital Garden</div>
-                <ul>
-                    <li><a href="../index.php">Home</a></li>
-                    <li><a href="login.php">Login</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+    <?php 
+    include_once "../includes/header.php";
+    ?>
 
     <main class="auth-section">
         <div class="auth-card">
@@ -56,13 +50,10 @@
             </div>
         </div>
     </main>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 Digital Garden. All rights reserved.</p>
-        </div>
-    </footer>
-
-    <script src="main.js"></script>
+    <?php
+    include_once "../includes/footer.php";
+    ?>
+    <script src="../public_assets/js/index.js"></script>
 </body>
+
 </html>

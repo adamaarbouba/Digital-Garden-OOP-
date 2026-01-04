@@ -14,16 +14,9 @@
 
 <body>
 
-    <header>
-        <div class="container">
-            <nav>
-                <div class="logo">Digital Garden</div>
-                <ul>
-                    <li><a href="logout.php">Logout</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+    <?php 
+    include_once "../includes/header.php";
+    ?>
 
     <main class="container notes">
 
@@ -61,11 +54,9 @@
         </div>
     </main>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Digital Garden</p>
-        </div>
-    </footer>
+    <?php
+    include_once "../includes/footer.php";
+    ?>
 
 </body>
 

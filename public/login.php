@@ -14,17 +14,9 @@
 
 <body>
 
-    <header>
-        <div class="container">
-            <nav>
-                <div class="logo">Digital Garden</div>
-                <ul>
-                    <li><a href="../index.php">Home</a></li>
-                    <li><a href="register.php">Sign Up</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+    <?php
+    include_once "../includes/header.php";
+    ?>
 
     <main class="auth-section">
         <div class="auth-card">
@@ -54,13 +46,11 @@
         </div>
     </main>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 Digital Garden. All rights reserved.</p>
-        </div>
-    </footer>
+    <?php
+    include_once "../includes/footer.php";
+    ?>
 
-    <script src="main.js"></script>
+    <script src="../public_assets/js/index.js"></script>
 </body>
 
 </html>

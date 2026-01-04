@@ -11,16 +11,9 @@
 
 <body>
 
-    <header>
-        <div class="container">
-            <nav>
-                <div class="logo">DG Admin</div>
-                <ul>
-                    <li><a href="../service/Logout.php">Logout</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+    <?php
+    include_once "../includes/header.php";
+    ?>
 
     <main class="container notes">
 
@@ -94,11 +87,9 @@
         </div>
     </main>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Digital Garden Admin Panel</p>
-        </div>
-    </footer>
+    <?php
+    include_once "../includes/footer.php";
+    ?>
 
 </body>
 
