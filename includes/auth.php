@@ -18,10 +18,11 @@ class Auth {
 
         if ($row && password_verify($password, $row['password'])) {
             if ($row['role'] === 'admin') {
-                header("dashboard.php");
+                header("Location :dashboard.php");
                 return new Admin($row['username'], $row['email'], $row['password']);
+
             } else {
-                header("index.php");
+                header("Location :index.php");
                 return new User($row['username'], $row['email'], $row['password']);
             }
         }

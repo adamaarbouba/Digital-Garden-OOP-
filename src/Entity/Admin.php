@@ -11,6 +11,10 @@ class Admin extends Perssone
       $this->role = "Admin";
    }
 
+     public function changeUserStatus(User $user, $status)
+    {
+        $user->setStatus($status);
+    }
 
 
 }
