@@ -29,7 +29,7 @@ class Theme {
             die ("wrong theme id");
         }
 
-        $this->id=(int)$id;
+        $this->id=$id;
     }
 
    

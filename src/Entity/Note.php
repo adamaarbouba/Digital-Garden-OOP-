@@ -27,7 +27,7 @@ class Note {
            die ("wrong note id");
         }
 
-        $this->id = (int) $id;
+        $this->id=$id;
     }
 
 }
