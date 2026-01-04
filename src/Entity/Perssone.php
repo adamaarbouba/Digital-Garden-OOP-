@@ -1,7 +1,6 @@
 <?php
 
-class Perssone
-{
+class Perssone {
 
   protected $id;
   protected $username;
@@ -9,23 +8,19 @@ class Perssone
   protected $password;
   protected $role;
 
-  public function __construct($username, $email, $password, $id = null)
-  {
+  public function __construct($username, $email, $password, $id = null) {
+    $this->id = $id;
     $this->username = $username;
     $this->email = $email;
-    $this->password = $password;
+    $this->password = password_hash($password, PASSWORD_DEFAULT);
   }
 
-  public function getRole()
-  {
+  public function getRole() {
     return $this->role;
-
   }
-
-  public function __get($name)
-  {
-    return $this->$name;
+  
+  public function getUsername() {
+    return $this->username;
   }
-
 
 }

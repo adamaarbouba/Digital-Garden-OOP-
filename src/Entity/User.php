@@ -5,7 +5,6 @@ include_once "Theme.php";
 class User extends Perssone
 {
 
-    protected $id;
     protected $status;
     protected $themes = [];
 
@@ -18,13 +17,13 @@ class User extends Perssone
         $this->status = "unblocked";
     }
 
-    public function __set($name, $value)
+    public function setStatus($status)
     {
-        $this->$name = $value;
+        $this->status=$status;
     }
-    public function __get($name)
+    public function getStatus()
     {
-        return $this->$name;
+        return $this->status;
     }
 
 }

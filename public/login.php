@@ -34,7 +34,7 @@
                 Invalid email or password.
             </div>
 
-            <form action="login_logic.php" method="POST" id="loginForm">
+            <form action="auth.php" method="POST" id="loginForm">
                 <div class="form-group">
                     <label for="email">Email Address</label>
                     <input type="email" id="email" name="email" placeholder="you@example.com" required>
